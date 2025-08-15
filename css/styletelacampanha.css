@@ -1,0 +1,177 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+        .image-box {
+            position: relative;
+            width: 55%;
+        }
+        .image-box img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border: none;
+        }
+       
+        .text-box {
+            width: 40%;
+        }
+        .categoria {
+            color: gray;
+            font-size: 14px;
+        }
+        .btn-doacao {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #ff007f;
+            color: #ff007f;
+            font-weight: bold;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        .nota {
+            font-size: 12px;
+            color: #ff007f;
+            margin-top: 10px;
+        }
+    
+        .btn-vermais {
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        /* Layout lado a lado */
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Carrossel */
+.carousel {
+    flex: 1;
+    position: relative;
+    max-width: 60%;
+}
+
+/* Transição suave entre slides */
+.carousel-slide {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    color: white;
+    height: 300px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.carousel-slide.active {
+    display: block;
+    opacity: 1;
+    position: relative;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-indicators .indicator.active {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.carousel-indicators .indicator.animating::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    animation: fillDot linear forwards;
+}
+
+@keyframes fillDot {
+    from { width: 0; }
+    to { width: 100%; }
+}
+.carousel-btn {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Caixa de texto */
+.text-box {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+.text-box .categoria {
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+.btn-doacao {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-doacao:hover {
+    background: #218838;
+}
+.nota {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 10px;
+}
